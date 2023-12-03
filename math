@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial, Sum, and Average of the First N Natural Numbers</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #C3E6CB; /* Pastel Green */
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .operation-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: left; /* Align text within the box */
+        }
+        .result-box {
+            background-color: #77DD77; /* Pastel Green */
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            margin-top: 10px;
+            text-align: center; /* Center content horizontally */
+        }
+        h2, label, input, button, .result-box, .operation-box div {
+            margin: 10px auto;
+        }
+        input {
+            padding: 5px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function calculateResults() {
+            var n = parseInt(document.getElementById("number").value);
+            var factorial = 1;
+            var sum = 0;
+            var i = 1;
+
+            while (i <= n) {
+                factorial *= i;
+                sum += i;
+                i++;
+            }
+
+            var average = sum / n;
+
+            document.getElementById("results").innerHTML = 
+            "Factorial: " + factorial + "<br>" +
+            "Sum: " + sum + "<br>" +
+            "Average: " + average.toFixed(2);
+            document.getElementById("results").classList.add('result-box');
+        }
+    </script>
+</head>
+<body>
+    <div class="operation-box">
+        <h2>Number Operations</h2>
+        <label for="number">Enter a number (N):</label>
+        <input type="number" id="number" placeholder="Enter N">
+        <br><br>
+        <button onclick="calculateResults()">Calculate</button>
+        <div id="results"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="index.html">Back to Home Page</a>
+</body>
+</html>
