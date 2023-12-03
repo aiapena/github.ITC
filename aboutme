@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffb6c1; /* Baby Pink */
+            text-align: center;
+            padding: 20px;
+            color: white; /* Set text color to white */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            flex-direction: row; /* Arrange items in a row */
+        }
+        h1 {
+            color: white;
+        }
+        h4 {
+            color: white; /* Change h4 text color to white */
+            text-align: left;
+            margin-left: 20px; /* Add a margin to the left side of the text */
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="https://imgur.com/QDmEVY3">
+            <img src="https://i.imgur.com/QDmEVY3.png" title="source: imgur.com" width="700px" />
+        </a>
+    </div>
+    <div>
+        <h1>Hello, I am Andrea.</h1>
+        <h4>I am Andrea Isabel A. Pena. I am a first-year student at Ateneo de Davao University, 
+            studying Bachelor of Science in Information System. I am the eldest daughter in my family of five. 
+            I have two dogs, Chichi and Bella. I also own an African Spurred Tortoise, Bob. In my spare time, 
+            I enjoy reading books, watching movies, and listening to music. I love listening to Taylor Swift 
+            (Stream 1989: Taylor's Version). I am very hard-working, responsible, and reliable. Someday, I wish 
+            to travel all over the world, become successful, and achieve all of my dreams.</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">Back to Home Page</a>
+    </div>
+</body>
+</html>
