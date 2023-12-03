@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFDAB9; /* Pastel Orange */
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center; /* Center content horizontally */
+        }
+        .result-box {
+            background-color: #FFA500; /* Orange */
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            margin-top: 10px;
+            text-align: center; /* Center content horizontally */
+        }
+        h2, label, input, .result-box {
+            margin: 10px auto;
+        }
+        input {
+            padding: 5px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function calculateTax() {
+            var income = parseFloat(document.getElementById("income").value);
+            var tax = 0;
+
+            if (income <= 250000) {
+                tax = 0;
+            } else if (income > 250000 && income <= 400000) {
+                tax = 0.20 * (income - 250000);
+            } else if (income > 400000 && income <= 800000) {
+                tax = 30000 + 0.25 * (income - 400000);
+            } else if (income > 800000 && income <= 2000000) {
+                tax = 130000 + 0.30 * (income - 800000);
+            } else if (income > 2000000 && income <= 8000000) {
+                tax = 490000 + 0.32 * (income - 2000000);
+            } else if (income > 8000000) {
+                tax = 2410000 + 0.35 * (income - 8000000);
+            }
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Income Tax: P" + tax.toFixed(2);
+            resultDiv.classList.add('result-box');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Income Tax Calculator</h2>
+        <label for="income">Enter Net Taxable Income:</label>
+        <br>
+        <label for="income">(Click Enter to show result)</label>
+        <input type="number" id="income" placeholder="Enter amount" onchange="calculateTax()">
+        <br><br>
+        <div id="result"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <a href="index.html">Back to Home Page</a>
+</body>
+</html>
