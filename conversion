@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffcc; /* Pastel Yellow */
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .conversion-box {
+            background-color: white;
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: left;
+        }
+        h2, input, span {
+            display: block;
+            margin: 10px auto;
+        }
+        input {
+            padding: 5px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function celsiusToFahrenheit() {
+            var celsius = parseFloat(document.getElementById("celsiusInput").value);
+            var fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("resultCelsiusToFahrenheit").innerHTML = fahrenheit.toFixed(2) + " °F";
+        }
+
+        function fahrenheitToCelsius() {
+            var fahrenheit = parseFloat(document.getElementById("fahrenheitInput").value);
+            var celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("resultFahrenheitToCelsius").innerHTML = celsius.toFixed(2) + " °C";
+        }
+
+        function metersToFeet() {
+            var meters = parseFloat(document.getElementById("metersInput").value);
+            var feet = meters * 3.28084;
+            document.getElementById("resultMetersToFeet").innerHTML = feet.toFixed(2) + " ft";
+        }
+
+        function feetToMeters() {
+            var feet = parseFloat(document.getElementById("feetInput").value);
+            var meters = feet / 3.28084;
+            document.getElementById("resultFeetToMeters").innerHTML = meters.toFixed(2) + " m";
+        }
+    </script>
+</head>
+<body>
+    <div class="conversion-box">
+        <h2>Celsius to Fahrenheit</h2>
+        <input type="number" id="celsiusInput" placeholder="Enter Celsius" oninput="celsiusToFahrenheit()">
+        <span id="resultCelsiusToFahrenheit"></span>
+    </div>
+
+    <div class="conversion-box">
+        <h2>Fahrenheit to Celsius</h2>
+        <input type="number" id="fahrenheitInput" placeholder="Enter Fahrenheit" oninput="fahrenheitToCelsius()">
+        <span id="resultFahrenheitToCelsius"></span>
+    </div>
+
+    <div class="conversion-box">
+        <h2>Meters to Feet</h2>
+        <input type="number" id="metersInput" placeholder="Enter Meters" oninput="metersToFeet()">
+        <span id="resultMetersToFeet"></span>
+    </div>
+
+    <div class="conversion-box">
+        <h2>Feet to Meters</h2>
+        <input type="number" id="feetInput" placeholder="Enter Feet" oninput="feetToMeters()">
+        <span id="resultFeetToMeters"></span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <a href="index.html">Back to Home Page</a>
+</body>
+</html>
